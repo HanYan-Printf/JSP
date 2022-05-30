@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>商家后台商品信息管理系统</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="dist/css/style.css">
+<link rel="stylesheet" href="dist/font-awesome/css/font-awesome.min.css">
+</head>
+<body class="sidebar-mini">
+<div class="wrapper">
+  <header class="main-header dark-bg">
+    <a href="index.html" class="logo dark-bg">
+      <span class="logo-lg"><img src="dist/img/logo.png">  <img src="dist/img/logo.png"></span>
+    </a>
+    <nav class="navbar navbar-static-top" role="navigation" style="background-color: #4a8fe1;">
+      <div class="pull-left search-box" style="margin-left: 15px">
+        <form action="#" method="get" class="search-form">
+          <div class="input-group">
+            <input type="text" name="search" class="form-control" placeholder="Search...">
+            <span class="input-group-btn">
+            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i> </button>
+            </span>
+          </div>
+        </form>
+      </div>
+    </nav>
+  </header>
+  <aside class="main-sidebar dark-bg" style="height: 980px">
+    <section class="sidebar">
+      <div class="user-panel black-bg">
+        <div class="pull-left image"> <img src="dist/img/img1.jpg" class="img-circle" alt="User Image"></div>
+        <div class="pull-left info">
+          <p>韩艳</p>
+          <a href="#" style="color: white"><i class="fa fa-circle" style="color: #00ff76"></i> 在线</a> </div>
+      </div>
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header dark-bg">菜单</li>
+        <li class="treeview"><a href="#"><i class="fa fa-dashboard"></i> <span>控制台</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+          <ul class="treeview-menu ">
+            <li class="active"><a href="index.html"><i class="fa fa-angle-right"></i> 订单管理</a></li>
+            <li><a href="dashboard-2.html"><i class="fa fa-angle-right"></i> 月销统计</a></li>
+            <li><a href="dashboard-3.html"><i class="fa fa-angle-right"></i> 库存管理</a></li>
+            <li><a href="Messages.html"><i class="fa fa-angle-right"></i> 评价管理</a></li>
+          </ul>
+        </li>
+        <li class="treeview"> <a href="#"><i class="fa fa-desktop"></i> <span>风格</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+          <ul class="treeview-menu">
+            <li><a href="index.html"><i class="fa fa-angle-right"></i> 初始页面</a></li>
+            <li><a href="index-light.html"><i class="fa fa-angle-right"></i> 明亮色调</a></li>
+          </ul>
+        </li>
+        <li class="treeview"> <a href="#"><i class="fa fa-files-o"></i> <span>其他页面</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/login.jsp"><i class="fa fa-angle-right"></i> 登录界面</a></li>
+            <li><a href="pages/register.jsp"><i class="fa fa-angle-right"></i> 注册界面</a></li>
+            <li><a href="pages/forgot-password.html"><i class="fa fa-angle-right"></i> 忘记密码</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </aside>
+  <div class="content-wrapper">
+    <section class="content-header">
+      <h1>订单管理</h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i> 主页</a></li>
+        <li class="active"><i class="fa fa-dashboard"></i> 订单管理</li>
+      </ol>
+    </section>
+    <section class="content container-fluid">
+      <div class="row">
+        <div class="col-lg-3 col-xs-6">
+          <div class="media-box">
+            <center>
+              <h4>今日销量&nbsp;&nbsp;&nbsp;67&nbsp;&nbsp;&nbsp;件</h4>
+            </center>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+          <div class="media-box bg-sea">
+            <center>
+              <h4>日销售额 &nbsp;&nbsp;&nbsp;4598&nbsp;&nbsp;&nbsp;元</h4>
+            </center>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+          <div class="media-box bg-blue">
+            <center>
+              <h4>今日利润 &nbsp;&nbsp;&nbsp;1764&nbsp;&nbsp;&nbsp;元</h4>
+            </center>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+          <div class="media-box bg-green">
+            <center>
+              <h4>对比昨日 &nbsp;&nbsp;&nbsp;+78.9%</h4>
+            </center>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="chart-box">
+            <div class="chart">
+              <div id="container">
+                <div class="unfilled">
+                  <h4 style="color: black"><b>待处理订单</b></h4>
+                  <div class="unfilled-order">
+                    <table class="table table-responsive">
+                      <thead>
+                      <tr>
+                        <th>商品编号</th>
+                        <th>商品名称</th>
+                        <th>顾客名称</th>
+                        <th>订单状态</th>
+                        <th>商品数量</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td class="text-truncate">101777</td>
+                        <td class="text-truncate"><a href="#">珂拉琪空气唇釉</a></td>
+                        <td class="text-truncate">八阿哥Bug</td>
+                        <td class="text-truncate"><span class="lable-tag tag-success">已付款</span></td>
+                        <td class="text-truncate">* 1</td>
+                      </tr>
+                      <tr>
+                        <td class="text-truncate">101775</td>
+                        <td class="text-truncate"><a href="#">舒克防蛀固齿牙膏</a></td>
+                        <td class="text-truncate">八阿哥Bug</td>
+                        <td class="text-truncate"><span class="lable-tag tag-unpaid">未付款</span></td>
+                        <td class="text-truncate">* 1</td>
+                      </tr>
+                      <tr>
+                        <td class="text-truncate">101687</td>
+                        <td class="text-truncate"><a href="#">芭妮兰卸妆膏</a></td>
+                        <td class="text-truncate">八阿哥Bug</td>
+                        <td class="text-truncate"><span class="lable-tag tag-success">已付款</span></td>
+                        <td class="text-truncate">* 1</td>
+                      </tr>
+                      <tr>
+                        <td class="text-truncate">101657</td>
+                        <td class="text-truncate"><a href="#">乐扣乐扣吸管杯</a></td>
+                        <td class="text-truncate">八阿哥Bug</td>
+                        <td class="text-truncate"><span class="lable-tag tag-success">未付款</span></td>
+                        <td class="text-truncate">* 1</td>
+                      </tr>
+                      <tr>
+                        <td class="text-truncate">101625</td>
+                        <td class="text-truncate"><a href="#">avze骑士靴</a></td>
+                        <td class="text-truncate">八阿哥Bug</td>
+                        <td class="text-truncate"><span class="lable-tag tag-warning">已付款</span></td>
+                        <td class="text-truncate">* 1</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="chart-box">
+            <h4 style="color: black"><b>待发货订单</b></h4>
+            <div class="unfilled-order">
+              <table class="table table-responsive">
+                <thead>
+                <tr>
+                  <th>编号</th>
+                  <th>名称</th>
+                  <th>买家</th>
+                  <th>时间</th>
+                  <th>数量</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td class="text-truncate">101727</td>
+                  <td class="text-truncate"><a href="#">佛跳墙</a></td>
+                  <td class="text-truncate">皇上</td>
+                  <td class="text-truncate"><span class="lable-tag tag-success">2021/12/5</span></td>
+                  <td class="text-truncate">* 1</td>
+                </tr>
+                <tr>
+                  <td class="text-truncate">101735</td>
+                  <td class="text-truncate"><a href="#">蟹粉汤包</a></td>
+                  <td class="text-truncate">熹贵妃</td>
+                  <td class="text-truncate"><span class="lable-tag tag-unpaid">2021/12/5</span></td>
+                  <td class="text-truncate">* 1</td>
+                </tr>
+                <tr>
+                  <td class="text-truncate">101647</td>
+                  <td class="text-truncate"><a href="#">金嗓子</a></td>
+                  <td class="text-truncate">安答应</td>
+                  <td class="text-truncate"><span class="lable-tag tag-success">2021/12/5</span></td>
+                  <td class="text-truncate">* 1</td>
+                </tr>
+                <tr>
+                  <td class="text-truncate">101217</td>
+                  <td class="text-truncate"><a href="#">欢宜香</a></td>
+                  <td class="text-truncate">华妃</td>
+                  <td class="text-truncate"><span class="lable-tag tag-success">2021/12/5</span></td>
+                  <td class="text-truncate">* 1</td>
+                </tr>
+                <tr>
+                  <td class="text-truncate">101225</td>
+                  <td class="text-truncate"><a href="#">脑残片</a></td>
+                  <td class="text-truncate">祺贵人</td>
+                  <td class="text-truncate"><span class="lable-tag tag-warning">2021/12/5</span></td>
+                  <td class="text-truncate">* 1</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="chart-box">
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">新消息</a></li>
+              <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">退/换申请</a></li>
+              <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">新评价</a></li>
+            </ul>
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="home">
+                <table class="table table-responsive">
+                  <tbody>
+                  <tr>
+                    <td class="text-truncate"><img src="dist/img/img1-mini.png" class="img-circle"></td>
+                    <td class="text-truncate"><b>毕老师</b><button class="btn btn-default btn-xs pull-right">查看</button><br>作业今晚截止，请抓紧时间提交。</td>
+                  </tr>
+                  <tr>
+                    <td class="text-truncate"><img src="dist/img/img2-mini.jpg" class="img-circle"></td>
+                    <td class="text-truncate"><b>顾老师</b><button class="btn btn-default btn-xs pull-right">查看</button><br>明天抽查作业，请以下同学提交...</td>
+                  </tr>
+                  <tr>
+                    <td class="text-truncate"><img src="dist/img/img4-mini.jpg" class="img-circle"></td>
+                    <td class="text-truncate"><b>崔老师</b><button class="btn btn-default btn-xs pull-right">查看</button><br>我在云班课创建了基础知识测试...</td>
+                  </tr>
+                  <tr>
+                    <td class="text-truncate"><img src="dist/img/img3-mini.jpg" class="img-circle"></td>
+                    <td class="text-truncate"><b>曲老师</b><button class="btn btn-default btn-xs pull-right">查看</button><br>是的。</td>
+                  </tr>
+                  <tr>
+                    <td class="text-truncate"><img src="dist/img/img5-mini.jpg" class="img-circle"></td>
+                    <td class="text-truncate"><b>郭老师</b><button class="btn btn-default btn-xs pull-right">查看</button><br>[分享]烟台大学关于调整2022年寒假...</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="profile">
+                <table class="table table-responsive">
+                  <tbody>
+                  <tr>
+                    <td class="text-truncate"><img src="dist/img/img1-1.jpg" class="img-circle"></td>
+                    <td class="text-truncate"><b>软工193</b><button class="btn btn-default btn-xs pull-right">查看</button><br>我发起了退课申请，请及时查看处理...</td>
+                  </tr>
+                  <tr>
+                    <td class="text-truncate"><img src="dist/img/img1-2.jpg" class="img-circle"></td>
+                    <td class="text-truncate"><b>软工193</b><button class="btn btn-default btn-xs pull-right">查看</button><br>我发起了退课申请，请及时查看处理...</td>
+                  </tr>
+                  <tr>
+                    <td class="text-truncate"><img src="dist/img/img1-3.jpg" class="img-circle"></td>
+                    <td class="text-truncate"><b>软工193</b><button class="btn btn-default btn-xs pull-right">查看</button><br>我发起了退课申请，请及时查看处理...</td>
+                  </tr>
+                  <tr>
+                    <td class="text-truncate"><img src="dist/img/img1-4.jpg" class="img-circle"></td>
+                    <td class="text-truncate"><b>软工193</b><button class="btn btn-default btn-xs pull-right">查看</button><br>我发起了退课申请，请及时查看处理...</td>
+                  </tr>
+                  <tr>
+                    <td class="text-truncate"><img src="dist/img/img1-5.jpg" class="img-circle"></td>
+                    <td class="text-truncate"><b>软工193</b><button class="btn btn-default btn-xs pull-right">查看</button><br>我发起了退课申请，请及时查看处理...</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="messages">
+                <table class="table table-responsive">
+                  <tbody>
+                  <tr>
+                    <td class="text-truncate"><img src="dist/img/img1-mini.png" class="img-circle"></td>
+                    <td class="text-truncate"><b>毕老师</b><button class="btn btn-default btn-xs pull-right">查看</button><br>大家控制一下时长，六分钟内讲完。</td>
+                  </tr>
+                  <tr>
+                    <td class="text-truncate"><img src="dist/img/img2-mini.jpg" class="img-circle"></td>
+                    <td class="text-truncate"><b>顾老师</b><button class="btn btn-default btn-xs pull-right">查看</button><br>今天到课率太低了，希望大家注意...</td>
+                  </tr>
+                  <tr>
+                    <td class="text-truncate"><img src="dist/img/img1-2.jpg" class="img-circle"></td>
+                    <td class="text-truncate"><b>软工193</b><button class="btn btn-default btn-xs pull-right">查看</button><br>课程很难，但老师讲的很好[感谢]</td>
+                  </tr>
+                  <tr>
+                    <td class="text-truncate"><img src="dist/img/img3-mini.jpg" class="img-circle"></td>
+                    <td class="text-truncate"><b>曲老师</b><button class="btn btn-default btn-xs pull-right">查看</button><br>请大家有计划的开始复习。</td>
+                  </tr>
+                  <tr>
+                    <td class="text-truncate"><img src="dist/img/img1-5.jpg" class="img-circle"></td>
+                    <td class="text-truncate"><b>软工193</b><button class="btn btn-default btn-xs pull-right">查看</button><br>老师讲的很好，下次不来了[害怕]</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="chart-box">
+            <h4 style="color: black"><b>待评价订单</b></h4>
+            <table class="table table-responsive">
+              <thead>
+              <tr style="height: 36px">
+                <th>编号</th>
+                <th>名称</th>
+                <th>买家</th>
+                <th>时间</th>
+                <th>状态</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr style="height: 36px">
+                <td class="text-truncate">000001</td>
+                <td class="text-truncate"><a href="#">计网课程</a></td>
+                <td class="text-truncate">软工193全员</td>
+                <td class="text-truncate"><span class="lable-tag tag-success">2021秋冬学期</span></td>
+                <td class="text-truncate">已签收</td>
+              </tr>
+              <tr style="height: 36px">
+                <td class="text-truncate">000002</td>
+                <td class="text-truncate"><a href="#">大物课程</a></td>
+                <td class="text-truncate">软工193全员</td>
+                <td class="text-truncate"><span class="lable-tag tag-success">2021秋冬学期</span></td>
+                <td class="text-truncate">已签收</td>
+              </tr>
+              <tr style="height: 36px">
+                <td class="text-truncate">000003</td>
+                <td class="text-truncate"><a href="#">概率论课程</a></td>
+                <td class="text-truncate">软工193全员</td>
+                <td class="text-truncate"><span class="lable-tag tag-success">2021秋冬学期</span></td>
+                <td class="text-truncate">已签收</td>
+              </tr>
+              <tr style="height: 36px">
+                <td class="text-truncate">000004</td>
+                <td class="text-truncate"><a href="#">人机交互技术</a></td>
+                <td class="text-truncate">部分193学生</td>
+                <td class="text-truncate"><span class="lable-tag tag-success">2021秋冬学期</span></td>
+                <td class="text-truncate">已签收</td>
+              </tr>
+              <tr style="height: 36px">
+                <td class="text-truncate">000005</td>
+                <td class="text-truncate"><a href="#">软件体系结构</a></td>
+                <td class="text-truncate">部分193学生</td>
+                <td class="text-truncate"><span class="lable-tag tag-success">2021秋冬学期</span></td>
+                <td class="text-truncate">已签收</td>
+              </tr>
+              <tr>
+                <td class="text-truncate">000006</td>
+                <td class="text-truncate"><a href="#">人工智能导论</a></td>
+                <td class="text-truncate">部分193学生</td>
+                <td class="text-truncate"><span class="lable-tag tag-success">2021秋冬学期</span></td>
+                <td class="text-truncate">已签收</td>
+              </tr>
+              <tr>
+                <td class="text-truncate">000007</td>
+                <td class="text-truncate"><a href="#">Web前端课程设计</a></td>
+                <td class="text-truncate">部分193学生</td>
+                <td class="text-truncate"><span class="lable-tag tag-success">2021秋冬学期</span></td>
+                <td class="text-truncate">已签收</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="main-footer dark-bg">
+    <center>
+    <div class="pull-right hidden-xs"> Version 1.0</div>
+    Copyright &copy; 2021 HanYan. All rights reserved.
+    </center>
+  </footer>
+</div>
+<script src="dist/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="dist/js/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+</body>
+</html>

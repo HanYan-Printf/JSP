@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>商家后台商品信息管理系统</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="dist/css/style.css">
+  <link rel="stylesheet" href="dist/font-awesome/css/font-awesome.min.css">
+</head>
+<body class="sidebar-mini">
+<div class="wrapper">
+  <header class="main-header dark-bg">
+    <a href="index.html" class="logo dark-bg">
+      <span class="logo-lg"><img src="dist/img/logo.png" alt="Ovio">  <img src="dist/img/logo.png" alt="Ovio"></span>
+    </a>
+    <nav class="navbar navbar-static-top" role="navigation" style="background-color: #4a8fe1;">
+      <div class="pull-left search-box" style="margin-left: 15px">
+        <form action="#" method="get" class="search-form">
+          <div class="input-group">
+            <input type="text" name="search" class="form-control" placeholder="Search...">
+            <span class="input-group-btn">
+            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i> </button>
+            </span>
+          </div>
+        </form>
+      </div>
+      <div class="navbar-custom-menu">
+
+      </div>
+    </nav>
+  </header>
+  <aside class="main-sidebar dark-bg" style="height: 666px">
+    <section class="sidebar">
+      <div class="user-panel black-bg">
+        <div class="pull-left image"> <img src="dist/img/img1.jpg" class="img-circle" alt="User Image"> </div>
+        <div class="pull-left info">
+          <p>韩艳</p>
+          <a href="#" style="color: white"><i class="fa fa-circle" style="color: #00ff76"></i> 在线</a> </div>
+      </div>
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header dark-bg">菜单</li>
+        <li class="treeview active"><a href="#"><i class="fa fa-dashboard"></i> <span>控制台</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+          <ul class="treeview-menu ">
+            <li class="active"><a href="index.html"><i class="fa fa-angle-right"></i> 订单管理</a></li>
+            <li><a href="dashboard-2.html"><i class="fa fa-angle-right"></i> 月销统计</a></li>
+            <li><a href="dashboard-3.html"><i class="fa fa-angle-right"></i> 库存管理</a></li>
+            <li><a href="Messages.html"><i class="fa fa-angle-right"></i> 评价管理</a></li>
+          </ul>
+        </li>
+        <li class="treeview"> <a href="#"><i class="fa fa-desktop"></i> <span>风格</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+          <ul class="treeview-menu">
+            <li><a href="index.html"><i class="fa fa-angle-right"></i> 初始页面</a></li>
+            <li><a href="index-light.html"><i class="fa fa-angle-right"></i> 明亮色调</a></li>
+          </ul>
+        </li>
+        <li class="treeview"> <a href="#"><i class="fa fa-files-o"></i> <span>其他页面</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/login.jsp"><i class="fa fa-angle-right"></i> 登录界面</a></li>
+            <li><a href="pages/register.jsp"><i class="fa fa-angle-right"></i> 注册界面</a></li>
+            <li><a href="pages/forgot-password.html"><i class="fa fa-angle-right"></i> 忘记密码</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </aside>
+  <div class="content-wrapper">
+    <section class="content-header">
+      <h1>库存管理</h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i> 主页</a></li>
+        <li class="active"><i class="fa fa-dashboard"></i>库存管理</li>
+      </ol>
+    </section>
+
+    <section class="content container-fluid">
+      <div class="row">
+        <div class="col-lg-3 col-xs-6">
+          <div class="media-box bg-grass">
+            <center>
+              <h4>商品种类&nbsp;&nbsp;&nbsp;378&nbsp;&nbsp;&nbsp;件</h4>
+            </center>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+          <div class="media-box bg-orangered">
+            <center>
+              <h4>商品总数&nbsp;&nbsp;&nbsp;38479&nbsp;&nbsp;&nbsp;件</h4>
+            </center>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+          <div class="media-box">
+            <center>
+              <h4>已售件数&nbsp;&nbsp;&nbsp;10243&nbsp;&nbsp;&nbsp;件</h4>
+            </center>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+          <div class="media-box bg-darkgreen">
+            <center>
+              <h4>剩余件数&nbsp;&nbsp;&nbsp;28236&nbsp;&nbsp;&nbsp;件</h4>
+            </center>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="chart-box">
+            <div class="chart">
+              <h4 style="color: black"><b>商品库存</b></h4>
+              <table class="table table-responsive">
+                <thead>
+                <tr>
+                  <th>编号</th>
+                  <th>名称</th>
+                  <th>类别</th>
+                  <th>库存</th>
+                  <th>状态</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr style="height: 41px">
+                  <td class="text-truncate">000001</td>
+                  <td class="text-truncate"><a href="#">晨光中性笔</a></td>
+                  <td class="text-truncate">日用品</td>
+                  <td class="text-truncate"><span class="lable-tag tag-success">1250</span></td>
+                  <td class="text-truncate" style="color: #00CC00">正常</td>
+                </tr>
+                <tr style="height: 41px">
+                  <td class="text-truncate">000002</td>
+                  <td class="text-truncate"><a href="#">倍思蓝牙耳机</a></td>
+                  <td class="text-truncate">日用品</td>
+                  <td class="text-truncate"><span class="lable-tag tag-success">178</span></td>
+                  <td class="text-truncate" style="color: #00CC00">正常</td>
+                </tr>
+                <tr style="height: 41px">
+                  <td class="text-truncate">000003</td>
+                  <td class="text-truncate"><a href="#">洁柔卫生纸</a></td>
+                  <td class="text-truncate">日用品</td>
+                  <td class="text-truncate"><span class="lable-tag tag-success">563</span></td>
+                  <td class="text-truncate" style="color: #00CC00">正常</td>
+                </tr>
+                <tr style="height: 41px">
+                  <td class="text-truncate">000004</td>
+                  <td class="text-truncate"><a href="#">欧莱雅吸油棒</a></td>
+                  <td class="text-truncate">美妆护肤</td>
+                  <td class="text-truncate"><span class="lable-tag tag-success">12</span></td>
+                  <td class="text-truncate" style="color: red">紧张</td>
+                </tr>
+                <tr style="height: 41px">
+                  <td class="text-truncate">000005</td>
+                  <td class="text-truncate"><a href="#">罗技无线鼠标</a></td>
+                  <td class="text-truncate">电子用品</td>
+                  <td class="text-truncate"><span class="lable-tag tag-success">23</span></td>
+                  <td class="text-truncate" style="color: red">紧张</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="chart-box">
+            <div class="chart">
+              <div id="container1"></div>
+              <h4 style="color: black"><b>上/下架商品</b></h4>
+              <table class="table table-responsive">
+                <thead>
+                <tr>
+                  <th>编号</th>
+                  <th>名称</th>
+                  <th>库存</th>
+                  <th>上/下架</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td class="text-truncate">000001</td>
+                  <td class="text-truncate"><a href="#">晨光中性笔</a></td>
+                  <td class="text-truncate">378</td>
+                  <td class="text-truncate"><button>上架</button>&nbsp;&nbsp;&nbsp;<button>下架</button></td>
+                </tr>
+                <tr>
+                  <td class="text-truncate">000002</td>
+                  <td class="text-truncate"><a href="#">倍思蓝牙耳机</a></td>
+                  <td class="text-truncate">29</td>
+                  <td class="text-truncate"><button>上架</button>&nbsp;&nbsp;&nbsp;<button>下架</button></td>
+                </tr>
+                <tr>
+                  <td class="text-truncate">000003</td>
+                  <td class="text-truncate"><a href="#">洁柔卫生纸</a></td>
+                  <td class="text-truncate">573</td>
+                  <td class="text-truncate"><button>上架</button>&nbsp;&nbsp;&nbsp;<button>下架</button></td>
+                </tr>
+                <tr>
+                  <td class="text-truncate">000004</td>
+                  <td class="text-truncate"><a href="#">欧莱雅吸油棒</a></td>
+                  <td class="text-truncate">12</td>
+                  <td class="text-truncate"><button>上架</button>&nbsp;&nbsp;&nbsp;<button>下架</button></td>
+                </tr>
+                <tr>
+                  <td class="text-truncate">000005</td>
+                  <td class="text-truncate"><a href="#">罗技无线鼠标</a></td>
+                  <td class="text-truncate">457</td>
+                  <td class="text-truncate"><button>上架</button>&nbsp;&nbsp;&nbsp;<button>下架</button></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="main-footer dark-bg">
+    <center>
+    <div class="pull-right hidden-xs"> Version 1.0</div>
+    Copyright &copy; 2021 HanYan. All rights reserved.
+    </center>
+  </footer>
+</div>
+<script src="dist/js/jquery.min.js"></script> 
+<script src="bootstrap/js/bootstrap.min.js"></script> 
+<script src="dist/js/index.js"></script>
+</body>
+</html>
